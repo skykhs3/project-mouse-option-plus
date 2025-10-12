@@ -1,0 +1,546 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		CEFAE0A02E9BF3F900CEFE87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEFAE0892E9BF3F700CEFE87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFAE0902E9BF3F700CEFE87;
+			remoteInfo = awesomekeyboard;
+		};
+		CEFAE0AA2E9BF3F900CEFE87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CEFAE0892E9BF3F700CEFE87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEFAE0902E9BF3F700CEFE87;
+			remoteInfo = awesomekeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CEFAE0912E9BF3F700CEFE87 /* awesomekeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = awesomekeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFAE09F2E9BF3F900CEFE87 /* awesomekeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = awesomekeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEFAE0A92E9BF3F900CEFE87 /* awesomekeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = awesomekeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		CEFAE0932E9BF3F700CEFE87 /* awesomekeyboard */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = awesomekeyboard;
+			sourceTree = "<group>";
+		};
+		CEFAE0A22E9BF3F900CEFE87 /* awesomekeyboardTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = awesomekeyboardTests;
+			sourceTree = "<group>";
+		};
+		CEFAE0AC2E9BF3F900CEFE87 /* awesomekeyboardUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = awesomekeyboardUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEFAE08E2E9BF3F700CEFE87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFAE09C2E9BF3F900CEFE87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFAE0A62E9BF3F900CEFE87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CEFAE0882E9BF3F700CEFE87 = {
+			isa = PBXGroup;
+			children = (
+				CEFAE0932E9BF3F700CEFE87 /* awesomekeyboard */,
+				CEFAE0A22E9BF3F900CEFE87 /* awesomekeyboardTests */,
+				CEFAE0AC2E9BF3F900CEFE87 /* awesomekeyboardUITests */,
+				CEFAE0922E9BF3F700CEFE87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CEFAE0922E9BF3F700CEFE87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEFAE0912E9BF3F700CEFE87 /* awesomekeyboard.app */,
+				CEFAE09F2E9BF3F900CEFE87 /* awesomekeyboardTests.xctest */,
+				CEFAE0A92E9BF3F900CEFE87 /* awesomekeyboardUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEFAE0902E9BF3F700CEFE87 /* awesomekeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFAE0B32E9BF3F900CEFE87 /* Build configuration list for PBXNativeTarget "awesomekeyboard" */;
+			buildPhases = (
+				CEFAE08D2E9BF3F700CEFE87 /* Sources */,
+				CEFAE08E2E9BF3F700CEFE87 /* Frameworks */,
+				CEFAE08F2E9BF3F700CEFE87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CEFAE0932E9BF3F700CEFE87 /* awesomekeyboard */,
+			);
+			name = awesomekeyboard;
+			packageProductDependencies = (
+			);
+			productName = awesomekeyboard;
+			productReference = CEFAE0912E9BF3F700CEFE87 /* awesomekeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CEFAE09E2E9BF3F900CEFE87 /* awesomekeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFAE0B62E9BF3F900CEFE87 /* Build configuration list for PBXNativeTarget "awesomekeyboardTests" */;
+			buildPhases = (
+				CEFAE09B2E9BF3F900CEFE87 /* Sources */,
+				CEFAE09C2E9BF3F900CEFE87 /* Frameworks */,
+				CEFAE09D2E9BF3F900CEFE87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEFAE0A12E9BF3F900CEFE87 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CEFAE0A22E9BF3F900CEFE87 /* awesomekeyboardTests */,
+			);
+			name = awesomekeyboardTests;
+			packageProductDependencies = (
+			);
+			productName = awesomekeyboardTests;
+			productReference = CEFAE09F2E9BF3F900CEFE87 /* awesomekeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CEFAE0A82E9BF3F900CEFE87 /* awesomekeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEFAE0B92E9BF3F900CEFE87 /* Build configuration list for PBXNativeTarget "awesomekeyboardUITests" */;
+			buildPhases = (
+				CEFAE0A52E9BF3F900CEFE87 /* Sources */,
+				CEFAE0A62E9BF3F900CEFE87 /* Frameworks */,
+				CEFAE0A72E9BF3F900CEFE87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CEFAE0AB2E9BF3F900CEFE87 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				CEFAE0AC2E9BF3F900CEFE87 /* awesomekeyboardUITests */,
+			);
+			name = awesomekeyboardUITests;
+			packageProductDependencies = (
+			);
+			productName = awesomekeyboardUITests;
+			productReference = CEFAE0A92E9BF3F900CEFE87 /* awesomekeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEFAE0892E9BF3F700CEFE87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1640;
+				LastUpgradeCheck = 1640;
+				TargetAttributes = {
+					CEFAE0902E9BF3F700CEFE87 = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					CEFAE09E2E9BF3F900CEFE87 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = CEFAE0902E9BF3F700CEFE87;
+					};
+					CEFAE0A82E9BF3F900CEFE87 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = CEFAE0902E9BF3F700CEFE87;
+					};
+				};
+			};
+			buildConfigurationList = CEFAE08C2E9BF3F700CEFE87 /* Build configuration list for PBXProject "awesomekeyboard" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEFAE0882E9BF3F700CEFE87;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CEFAE0922E9BF3F700CEFE87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEFAE0902E9BF3F700CEFE87 /* awesomekeyboard */,
+				CEFAE09E2E9BF3F900CEFE87 /* awesomekeyboardTests */,
+				CEFAE0A82E9BF3F900CEFE87 /* awesomekeyboardUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEFAE08F2E9BF3F700CEFE87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFAE09D2E9BF3F900CEFE87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFAE0A72E9BF3F900CEFE87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEFAE08D2E9BF3F700CEFE87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFAE09B2E9BF3F900CEFE87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEFAE0A52E9BF3F900CEFE87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CEFAE0A12E9BF3F900CEFE87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEFAE0902E9BF3F700CEFE87 /* awesomekeyboard */;
+			targetProxy = CEFAE0A02E9BF3F900CEFE87 /* PBXContainerItemProxy */;
+		};
+		CEFAE0AB2E9BF3F900CEFE87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CEFAE0902E9BF3F700CEFE87 /* awesomekeyboard */;
+			targetProxy = CEFAE0AA2E9BF3F900CEFE87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CEFAE0B12E9BF3F900CEFE87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEFAE0B22E9BF3F900CEFE87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		CEFAE0B42E9BF3F900CEFE87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = awesomekeyboard/awesomekeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		CEFAE0B52E9BF3F900CEFE87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = awesomekeyboard/awesomekeyboard.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				REGISTER_APP_GROUPS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CEFAE0B72E9BF3F900CEFE87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/awesomekeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/awesomekeyboard";
+			};
+			name = Debug;
+		};
+		CEFAE0B82E9BF3F900CEFE87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/awesomekeyboard.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/awesomekeyboard";
+			};
+			name = Release;
+		};
+		CEFAE0BA2E9BF3F900CEFE87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = awesomekeyboard;
+			};
+			name = Debug;
+		};
+		CEFAE0BB2E9BF3F900CEFE87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = awesomekeyboard;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEFAE08C2E9BF3F700CEFE87 /* Build configuration list for PBXProject "awesomekeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFAE0B12E9BF3F900CEFE87 /* Debug */,
+				CEFAE0B22E9BF3F900CEFE87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFAE0B32E9BF3F900CEFE87 /* Build configuration list for PBXNativeTarget "awesomekeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFAE0B42E9BF3F900CEFE87 /* Debug */,
+				CEFAE0B52E9BF3F900CEFE87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFAE0B62E9BF3F900CEFE87 /* Build configuration list for PBXNativeTarget "awesomekeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFAE0B72E9BF3F900CEFE87 /* Debug */,
+				CEFAE0B82E9BF3F900CEFE87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEFAE0B92E9BF3F900CEFE87 /* Build configuration list for PBXNativeTarget "awesomekeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEFAE0BA2E9BF3F900CEFE87 /* Debug */,
+				CEFAE0BB2E9BF3F900CEFE87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEFAE0892E9BF3F700CEFE87 /* Project object */;
+}
