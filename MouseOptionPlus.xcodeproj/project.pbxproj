@@ -29,20 +29,33 @@
 		CEFAE0A92E9BF3F900CEFE87 /* awesomekeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = awesomekeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CEFAE0BD2E9BF55300CEFE87 /* Exceptions for "MouseOptionPlus" folder in "awesomekeyboard" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CEFAE0902E9BF3F700CEFE87 /* awesomekeyboard */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		CEFAE0932E9BF3F700CEFE87 /* awesomekeyboard */ = {
+		CEFAE0932E9BF3F700CEFE87 /* MouseOptionPlus */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = awesomekeyboard;
+			exceptions = (
+				CEFAE0BD2E9BF55300CEFE87 /* Exceptions for "MouseOptionPlus" folder in "awesomekeyboard" target */,
+			);
+			path = MouseOptionPlus;
 			sourceTree = "<group>";
 		};
-		CEFAE0A22E9BF3F900CEFE87 /* awesomekeyboardTests */ = {
+		CEFAE0A22E9BF3F900CEFE87 /* MouseOptionPlusTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = awesomekeyboardTests;
+			path = MouseOptionPlusTests;
 			sourceTree = "<group>";
 		};
-		CEFAE0AC2E9BF3F900CEFE87 /* awesomekeyboardUITests */ = {
+		CEFAE0AC2E9BF3F900CEFE87 /* MouseOptionPlusUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = awesomekeyboardUITests;
+			path = MouseOptionPlusUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -75,9 +88,9 @@
 		CEFAE0882E9BF3F700CEFE87 = {
 			isa = PBXGroup;
 			children = (
-				CEFAE0932E9BF3F700CEFE87 /* awesomekeyboard */,
-				CEFAE0A22E9BF3F900CEFE87 /* awesomekeyboardTests */,
-				CEFAE0AC2E9BF3F900CEFE87 /* awesomekeyboardUITests */,
+				CEFAE0932E9BF3F700CEFE87 /* MouseOptionPlus */,
+				CEFAE0A22E9BF3F900CEFE87 /* MouseOptionPlusTests */,
+				CEFAE0AC2E9BF3F900CEFE87 /* MouseOptionPlusUITests */,
 				CEFAE0922E9BF3F700CEFE87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,7 +121,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				CEFAE0932E9BF3F700CEFE87 /* awesomekeyboard */,
+				CEFAE0932E9BF3F700CEFE87 /* MouseOptionPlus */,
 			);
 			name = awesomekeyboard;
 			packageProductDependencies = (
@@ -131,7 +144,7 @@
 				CEFAE0A12E9BF3F900CEFE87 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				CEFAE0A22E9BF3F900CEFE87 /* awesomekeyboardTests */,
+				CEFAE0A22E9BF3F900CEFE87 /* MouseOptionPlusTests */,
 			);
 			name = awesomekeyboardTests;
 			packageProductDependencies = (
@@ -154,7 +167,7 @@
 				CEFAE0AB2E9BF3F900CEFE87 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				CEFAE0AC2E9BF3F900CEFE87 /* awesomekeyboardUITests */,
+				CEFAE0AC2E9BF3F900CEFE87 /* MouseOptionPlusUITests */,
 			);
 			name = awesomekeyboardUITests;
 			packageProductDependencies = (
@@ -186,7 +199,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CEFAE08C2E9BF3F700CEFE87 /* Build configuration list for PBXProject "awesomekeyboard" */;
+			buildConfigurationList = CEFAE08C2E9BF3F700CEFE87 /* Build configuration list for PBXProject "MouseOptionPlus" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -392,19 +405,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = awesomekeyboard/awesomekeyboard.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MouseOptionPlus/MouseOptionPlus.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88LGKDNF65;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MouseOptionPlus/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "권한";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "군한";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.MouseOptionPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -417,19 +436,25 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = awesomekeyboard/awesomekeyboard.entitlements;
+				CODE_SIGN_ENTITLEMENTS = MouseOptionPlus/MouseOptionPlus.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88LGKDNF65;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MouseOptionPlus/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSAppleEventsUsageDescription = "권한";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "군한";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboard;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.MouseOptionPlus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -446,7 +471,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.MouseOptionPlusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -463,7 +488,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 15.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardTests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.MouseOptionPlusTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -478,7 +503,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.MouseOptionPlusUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -493,7 +518,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.awesomekeyboardUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.skykhs3.MouseOptionPlusUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
@@ -504,7 +529,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CEFAE08C2E9BF3F700CEFE87 /* Build configuration list for PBXProject "awesomekeyboard" */ = {
+		CEFAE08C2E9BF3F700CEFE87 /* Build configuration list for PBXProject "MouseOptionPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CEFAE0B12E9BF3F900CEFE87 /* Debug */,

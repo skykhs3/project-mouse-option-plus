@@ -2,13 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>awesomekeyboard.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
-	</dict>
+	<key>NSAccessibilityUsageDescription</key>
+	<string>데스크톱 전환 기능을 사용하려면 손쉬운 사용 권한이 필요합니다</string>
 </dict>
 </plist>
