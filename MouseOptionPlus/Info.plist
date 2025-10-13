@@ -4,5 +4,7 @@
 <dict>
 	<key>NSAccessibilityUsageDescription</key>
 	<string>데스크톱 전환 기능을 사용하려면 손쉬운 사용 권한이 필요합니다</string>
+	<key>LSUIElement</key>
+	<true/>
 </dict>
 </plist>
