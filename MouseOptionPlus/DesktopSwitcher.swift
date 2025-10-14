@@ -53,8 +53,6 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
             
             // 최소 드래그 거리 확인
             if abs(deltaX) >= minimumDragDistance {
-                let currentTime = Date().timeIntervalSince1970
-
                 if deltaX > 0 {
                     // 오른쪽으로 드래그 - 뒤로가기
                     print("⬅️ 오른쪽 드래그 감지 - 브라우저 뒤로가기")
@@ -84,46 +82,50 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
                     print("🖱️ 마우스 버튼 3번 단순 클릭 - 미션 컨트롤 실행")
                     DesktopSwitcher.showMissionControl()
                 } else {
-                    print("🖱️ 마우스 버튼 3번 드래그 감지 - 미션 컨트롤 실행하지 않음")
+                    if deltaX > 0 {
+                        DesktopSwitcher.switchToNext()
+                    }
+                    
+                
                 }
             }
             
             print("✅ 마우스 버튼 3번 떼어짐 - 데스크톱 전환 모드 종료")
         }
         
-    case .otherMouseDragged:
-        let currentMousePosition = NSEvent.mouseLocation
-        let deltaX = currentMousePosition.x - initialMousePosition.x
-        
-        // 마우스 버튼 2번은 드래그 중에는 처리하지 않음 (버튼을 뗄 때만 처리)
-        if isMouseButton2Pressed {
-            // 드래그 중에는 로그만 출력 (실제 액션은 버튼을 뗄 때 실행)
-            print("🖱️ 마우스 드래그 중 (버튼 2번) - 현재 이동: \(deltaX)")
-        }
-        // 마우스 버튼 3번이 눌린 상태에서 데스크톱 전환 처리 (기존 방식 유지)
-        else if isMouseButton3Pressed {
-            let deltaX3 = currentMousePosition.x - mouseButton3StartPosition.x
-            
-            // 드래그가 시작되었음을 표시
-            if abs(deltaX3) >= minimumDragDistance {
-                mouseButton3HasDragged = true
-                print("🖱️ 마우스 드래그 감지 (버튼 3번) - X 이동: \(deltaX3)")
-                
-                if deltaX3 < 0 {
-                    // 왼쪽으로 드래그 - 다음 데스크톱
-                    print("⬅️ 왼쪽 드래그 감지 - 다음 데스크톱으로 전환")
-                    DesktopSwitcher.switchToNext()
-                } else {
-                    // 오른쪽으로 드래그 - 이전 데스크톱
-                    print("➡️ 오른쪽 드래그 감지 - 이전 데스크톱으로 전환")
-                    DesktopSwitcher.switchToPrevious()
-                }
-                
-                // 드래그 완료 후 초기 위치 업데이트 (연속 드래그 방지)
-                mouseButton3StartPosition = currentMousePosition
-            }
-        }
-        
+//    case .otherMouseDragged:
+//        let currentMousePosition = NSEvent.mouseLocation
+//        let deltaX = currentMousePosition.x - initialMousePosition.x
+//        
+//        // 마우스 버튼 2번은 드래그 중에는 처리하지 않음 (버튼을 뗄 때만 처리)
+//        if isMouseButton2Pressed {
+//            // 드래그 중에는 로그만 출력 (실제 액션은 버튼을 뗄 때 실행)
+//            print("🖱️ 마우스 드래그 중 (버튼 2번) - 현재 이동: \(deltaX)")
+//        }
+//        // 마우스 버튼 3번이 눌린 상태에서 데스크톱 전환 처리 (기존 방식 유지)
+//        else if isMouseButton3Pressed {
+//            let deltaX3 = currentMousePosition.x - mouseButton3StartPosition.x
+//            
+//            // 드래그가 시작되었음을 표시
+//            if abs(deltaX3) >= minimumDragDistance {
+//                mouseButton3HasDragged = true
+//                print("🖱️ 마우스 드래그 감지 (버튼 3번) - X 이동: \(deltaX3)")
+//                
+//                if deltaX3 < 0 {
+//                    // 왼쪽으로 드래그 - 다음 데스크톱
+//                    print("⬅️ 왼쪽 드래그 감지 - 다음 데스크톱으로 전환")
+//                    DesktopSwitcher.switchToNext()
+//                } else {
+//                    // 오른쪽으로 드래그 - 이전 데스크톱
+//                    print("➡️ 오른쪽 드래그 감지 - 이전 데스크톱으로 전환")
+//                    DesktopSwitcher.switchToPrevious()
+//                }
+//                
+//                // 드래그 완료 후 초기 위치 업데이트 (연속 드래그 방지)
+//                mouseButton3StartPosition = currentMousePosition
+//            }
+//        }
+//        
     default:
         break
     }
