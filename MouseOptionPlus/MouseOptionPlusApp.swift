@@ -13,7 +13,7 @@ struct MouseOptionPlusApp: App {
     
     var body: some Scene {
         // 메뉴바 앱으로 변경
-        MenuBarExtra("MouseOptionPlus", systemImage: "computermouse") {
+        MenuBarExtra("Mouse Option Plus", systemImage: "computermouse") {
             Button("설정 열기") {
                 appDelegate.openSettingsWindow()
             }
@@ -90,7 +90,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func showAbout() {
         let alert = NSAlert()
-        alert.messageText = "MouseOptionPlus"
+        alert.messageText = "Mouse Option Plus"
         alert.informativeText = """
         마우스 제스처로 데스크톱 전환과 브라우저 네비게이션을 제어하는 앱입니다.
         
