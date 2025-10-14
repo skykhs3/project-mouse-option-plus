@@ -38,7 +38,7 @@ struct MouseOptionPlusApp: App {
 class AppDelegate: NSObject, NSApplicationDelegate {
     // Keep strong reference to settings window (prevent memory deallocation)
     private var settingsWindow: NSWindow?
-    
+     
     func applicationDidFinishLaunching(_ notification: Notification) {
         print("🚀 App started - Mouse event monitoring automatically enabled")
         DesktopSwitcher.startMouseEventMonitoring()
