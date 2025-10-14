@@ -19,20 +19,19 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
         let buttonNumber = event.getIntegerValueField(.mouseEventButtonNumber)
         print("🖱️ Mouse button pressed - Button number: \(buttonNumber)")
         
-        // Check if mouse button 2 (right click) is pressed
         if buttonNumber == 2 {
             isMouseButton2Pressed = true
             mouseButton2StartPosition = NSEvent.mouseLocation
         }
-        // Check if mouse button 3 (wheel click) is pressed
         else if buttonNumber == 3 {
             isMouseButton3Pressed = true
             mouseButton3StartPosition = NSEvent.mouseLocation
             mouseButton3HasDragged = false
+            return nil  // Block default browser navigation behavior
         }
-        // Check if mouse button 4 is pressed
         else if buttonNumber == 4 {
             DesktopSwitcher.toggleFullscreen()
+            return nil  // Block default browser navigation behavior
         }
         
     case .otherMouseUp:
@@ -83,6 +82,10 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
                 }
             }
         
+        }
+        // Block default behavior for button 4 and 5
+        else if buttonNumber == 4 || buttonNumber == 5 {
+            return nil  // Block default browser navigation behavior
         }
       
     default:
