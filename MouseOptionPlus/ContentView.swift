@@ -5,19 +5,19 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 20) {
-            Text("데스크톱 전환 도구")
+            Text("Desktop switch Test")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding(.bottom, 10)
             
-            // 기존 버튼들
+            // Desktop switch buttons
             VStack(spacing: 15) {
-                Button("이전 데스크톱 (←)") {
+                Button("Left Desktop (←)") {
                     DesktopSwitcher.switchToPrevious()
                 }
                 .font(.title)
                 
-                Button("다음 데스크톱 (→)") {
+                Button("Right Desktop (→)") {
                     DesktopSwitcher.switchToNext()
                 }
                 .font(.title)
@@ -26,20 +26,20 @@ struct ContentView: View {
             Divider()
                 .padding(.vertical, 10)
             
-            // 마우스 드래그 기능 설명
+            // Mouse gesture features
             VStack(spacing: 15) {
-                Text("마우스 드래그 기능")
+                Text("Mouse")
                     .font(.headline)
                     .fontWeight(.semibold)
                 
                 VStack(spacing: 8) {
                     HStack {
-                        Text("🖱️ 마우스 휠 버튼(3번) + 드래그")
+                        Text("🖱️ Middle Mouse Button (Button 3) Drag")
                             .font(.body)
                             .fontWeight(.medium)
                         Spacer()
                     }
-                    Text("데스크톱 전환 (왼쪽: 다음, 오른쪽: 이전)")
+                    Text("Switch Desktop (Left: Next, Right: Previous)")
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -48,12 +48,12 @@ struct ContentView: View {
                 
                 VStack(spacing: 8) {
                     HStack {
-                        Text("🖱️ 우클릭 버튼(2번) + 드래그")
+                        Text("🖱️ Middle Mouse Button (Button 3) Click")
                             .font(.body)
                             .fontWeight(.medium)
                         Spacer()
                     }
-                    Text("브라우저 네비게이션 (왼쪽: 뒤로가기, 오른쪽: 앞으로가기)")
+                    Text("Show Mission Control")
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -62,12 +62,12 @@ struct ContentView: View {
                 
                 VStack(spacing: 8) {
                     HStack {
-                        Text("🖱️ 마우스 휠 버튼(3번) 클릭")
+                        Text("🖱️ Mouse Button 4 Click")
                             .font(.body)
                             .fontWeight(.medium)
                         Spacer()
                     }
-                    Text("미션 컨트롤 표시")
+                    Text("Toggle Full Screen")
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
@@ -76,49 +76,49 @@ struct ContentView: View {
                 
                 VStack(spacing: 8) {
                     HStack {
-                        Text("🖱️ 마우스 버튼(4번) 클릭")
+                        Text("🖱️ Mouse Button 5 Drag")
                             .font(.body)
                             .fontWeight(.medium)
                         Spacer()
                     }
-                    Text("전체화면 토글")
+                    Text("Browser Navigation (Left: Back, Right: Forward)")
                         .font(.caption)
                         .foregroundColor(.secondary)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .padding(.horizontal, 10)
                 
-                Text("마우스 버튼을 눌러보면 콘솔에 버튼 번호가 출력됩니다")
+                Text("Press mouse buttons to see button numbers in Xcode console")
                     .font(.caption)
                     .foregroundColor(.orange)
                     .multilineTextAlignment(.center)
                     .padding(.top, 5)
             }
             
-            // 상태 표시
+            // Status indicator
             HStack {
                 Circle()
                     .fill(Color.green)
                     .frame(width: 8, height: 8)
-                Text("마우스 모니터링 자동 활성화됨")
+                Text("Mouse Monitoring Active")
                     .font(.caption)
                     .foregroundColor(.green)
             }
             .padding(.top, 5)
         }
         .padding(40)
-        .onAppear(perform: checkAccessibilityPermissions) // 앱이 나타날 때 권한 확인
+        .onAppear(perform: checkAccessibilityPermissions) // Check permissions on appear
     }
     
-    // 손쉬운 사용 권한이 있는지 확인하고, 없으면 사용자에게 요청하는 함수
+    // Check accessibility permissions and prompt user if needed
     private func checkAccessibilityPermissions() {
         let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as String: true]
         let isTrusted = AXIsProcessTrustedWithOptions(options)
         
         if isTrusted {
-            print("손쉬운 사용 권한이 허용되었습니다.")
+            print("Accessibility permission granted.")
         } else {
-            print("손쉬운 사용 권한이 필요합니다.")
+            print("Accessibility permission required.")
         }
     }
 }
