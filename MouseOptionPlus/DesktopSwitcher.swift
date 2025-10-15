@@ -65,20 +65,37 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
             if !mouseButton3HasDragged {
                 let endPosition = NSEvent.mouseLocation
                 let deltaX = endPosition.x - mouseButton3StartPosition.x
+                let deltaY = endPosition.y - mouseButton3StartPosition.y
                 
-                // If drag distance is less than minimum, treat as simple click
-                if abs(deltaX) < minimumDragDistance {
-                    print("✅ Mouse button 3 simple click - Execute Mission Control")
-                    DesktopSwitcher.showMissionControl()
-                } else {
-                    if deltaX > 0 {
-                        print("⬅️ Mouse button 3 Right drag detected - Desktop go left")
-                        DesktopSwitcher.switchToPrevious()
-                    } else{
-                        print("➡️ Mouse button 3 Left drag detected - Desktop go right")
-                        DesktopSwitcher.switchToNext()
+                if abs(deltaX) > abs(deltaY) {
+                    if abs(deltaX) < minimumDragDistance {
+                        print("✅ Mouse button 3 simple click - Execute Mission Control")
+                        DesktopSwitcher.showLaunchpad()
+                    } else {
+                        if deltaX > 0 {
+                            print("⬅️ Mouse button 3 Right drag detected - Desktop go left")
+                            DesktopSwitcher.switchToPrevious()
+                        } else{
+                            print("➡️ Mouse button 3 Left drag detected - Desktop go right")
+                            DesktopSwitcher.switchToNext()
+                        }
+                        
                     }
-                    
+                }
+                else {
+                    if abs(deltaY) < minimumDragDistance {
+                        print("✅ Mouse button 3 simple click - Execute Mission Control")
+                        DesktopSwitcher.showLaunchpad()
+                    } else {
+                        if deltaY > 0 {
+                            print("⬅️ Mouse button 3 Up drag detected - Desktop go up")
+                            DesktopSwitcher.showMissionControl()
+                        } else{
+                            print("➡️ Mouse button 3 Down drag detected - Desktop go down")
+                            DesktopSwitcher.showAppExpose()
+                        }
+                        
+                    }
                 }
             }
         
@@ -152,7 +169,6 @@ class DesktopSwitcher {
     
     // MARK: - Fullscreen and Mission Control Features
     
-    /// Toggle fullscreen
     static func toggleFullscreen() {
         let script = """
         tell application "System Events" to key code 3 using {command down, control down}
@@ -160,10 +176,23 @@ class DesktopSwitcher {
         runAppleScript(script: script)
     }
     
-    /// Show Mission Control
     static func showMissionControl() {
         let script = """
         tell application "System Events" to key code 160
+        """
+        runAppleScript(script: script)
+    }
+    
+    static func showLaunchpad() {
+        let script = """
+        do shell script "open /System/Applications/Launchpad.app"
+        """
+        runAppleScript(script: script)
+    }
+    
+    static func showAppExpose() {
+        let script = """
+        tell application "System Events" to key code 125 using {control down}
         """
         runAppleScript(script: script)
     }
