@@ -3,13 +3,11 @@ import CoreGraphics
 import AppKit
 
 // Global variables (for access in event callbacks)
-private var isMouseButton3Pressed = false
-private var isMouseButton2Pressed = false
 private var initialMousePosition: NSPoint = NSPoint.zero
 private let minimumDragDistance: CGFloat = 50.0
 private var mouseButton2StartPosition: NSPoint = NSPoint.zero
 private var mouseButton3StartPosition: NSPoint = NSPoint.zero
-private var mouseButton3HasDragged = false
+private var mouseButton4StartPosition: NSPoint = NSPoint.zero
 
 // Global function to be used as C function pointer
 func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, refcon: UnsafeMutableRawPointer?) -> Unmanaged<CGEvent>? {
@@ -20,17 +18,15 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
         print("🖱️ Mouse button pressed - Button number: \(buttonNumber)")
         
         if buttonNumber == 2 {
-            isMouseButton2Pressed = true
             mouseButton2StartPosition = NSEvent.mouseLocation
         }
         else if buttonNumber == 3 {
-            isMouseButton3Pressed = true
             mouseButton3StartPosition = NSEvent.mouseLocation
-            mouseButton3HasDragged = false
             return nil  // Block default browser navigation behavior
         }
         else if buttonNumber == 4 {
-            DesktopSwitcher.toggleFullscreen()
+//            DesktopSwitcher.toggleFullscreen()
+            mouseButton4StartPosition = NSEvent.mouseLocation
             return nil  // Block default browser navigation behavior
         }
         
@@ -39,13 +35,9 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
         print("🖱️ Mouse button released - Button number: \(buttonNumber)")
         
         if buttonNumber == 2 {
-            isMouseButton2Pressed = false
-            
-            // Calculate distance when mouse button 2 is released and execute browser navigation
             let endPosition = NSEvent.mouseLocation
             let deltaX = endPosition.x - mouseButton2StartPosition.x
             
-            // Check minimum drag distance
             if abs(deltaX) >= minimumDragDistance {
                 if deltaX > 0 {
                     // Right drag - Go back
@@ -59,50 +51,76 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
             }
         }
         else if buttonNumber == 3 {
-            isMouseButton3Pressed = false
+            let endPosition = NSEvent.mouseLocation
+            let deltaX = endPosition.x - mouseButton3StartPosition.x
+            let deltaY = endPosition.y - mouseButton3StartPosition.y
             
-            // If no drag occurred when mouse button 3 is released, execute Mission Control
-            if !mouseButton3HasDragged {
-                let endPosition = NSEvent.mouseLocation
-                let deltaX = endPosition.x - mouseButton3StartPosition.x
-                let deltaY = endPosition.y - mouseButton3StartPosition.y
-                
-                if abs(deltaX) > abs(deltaY) {
-                    if abs(deltaX) < minimumDragDistance {
-                        print("✅ Mouse button 3 simple click - Execute Mission Control")
-                        DesktopSwitcher.showLaunchpad()
-                    } else {
-                        if deltaX > 0 {
-                            print("⬅️ Mouse button 3 Right drag detected - Desktop go left")
-                            DesktopSwitcher.switchToPrevious()
-                        } else{
-                            print("➡️ Mouse button 3 Left drag detected - Desktop go right")
-                            DesktopSwitcher.switchToNext()
-                        }
-                        
+            if abs(deltaX) > abs(deltaY) {
+                if abs(deltaX) < minimumDragDistance {
+                    print("✅ Mouse button 3 simple click - Execute Mission Control")
+                    DesktopSwitcher.showLaunchpad()
+                } else {
+                    if deltaX > 0 {
+                        print("⬅️ Mouse button 3 Right drag detected - Desktop go left")
+                        DesktopSwitcher.switchToPrevious()
+                    } else{
+                        print("➡️ Mouse button 3 Left drag detected - Desktop go right")
+                        DesktopSwitcher.switchToNext()
                     }
+                    
                 }
-                else {
-                    if abs(deltaY) < minimumDragDistance {
-                        print("✅ Mouse button 3 simple click - Execute Mission Control")
-                        DesktopSwitcher.showLaunchpad()
-                    } else {
-                        if deltaY > 0 {
-                            print("⬅️ Mouse button 3 Up drag detected - Desktop go up")
-                            DesktopSwitcher.showMissionControl()
-                        } else{
-                            print("➡️ Mouse button 3 Down drag detected - Desktop go down")
-                            DesktopSwitcher.showAppExpose()
-                        }
-                        
+            }
+            else {
+                if abs(deltaY) < minimumDragDistance {
+                    print("✅ Mouse button 3 simple click - Execute Mission Control")
+                    DesktopSwitcher.showLaunchpad()
+                } else {
+                    if deltaY > 0 {
+                        print("⬅️ Mouse button 3 Up drag detected - Desktop go up")
+                        DesktopSwitcher.showMissionControl()
+                    } else{
+                        print("➡️ Mouse button 3 Down drag detected - Desktop go down")
+                        DesktopSwitcher.showAppExpose()
                     }
                 }
             }
         
         }
         // Block default behavior for button 4 and 5
-        else if buttonNumber == 4 || buttonNumber == 5 {
-            return nil  // Block default browser navigation behavior
+        else if buttonNumber == 4 {
+            let endPosition = NSEvent.mouseLocation
+            let deltaX = endPosition.x - mouseButton4StartPosition.x
+            let deltaY = endPosition.y - mouseButton4StartPosition.y
+            
+            if abs(deltaX) > abs(deltaY) {
+                if abs(deltaX) < minimumDragDistance {
+                    print("✅ Mouse button 4 simple click - Open Cursor")
+                    DesktopSwitcher.openCursor()
+                } else {
+                    if deltaX > 0 {
+                        print("⬅️ Mouse button 4 Right drag detected - Desktop go left")
+                        DesktopSwitcher.switchToPrevious()
+                    } else{
+                        print("➡️ Mouse button 4 Left drag detected - Desktop go right")
+                        DesktopSwitcher.switchToNext()
+                    }
+                    
+                }
+            }
+            else {
+                if abs(deltaY) < minimumDragDistance {
+                    print("✅ Mouse button 4 simple click - Open Cursor")
+                    DesktopSwitcher.openCursor()
+                } else {
+                    if deltaY > 0 {
+                        print("⬅️ Mouse button 4 Up drag detected - Desktop go up")
+                        DesktopSwitcher.showMissionControl()
+                    } else{
+                        print("➡️ Mouse button 4 Down drag detected - Desktop go down")
+                        DesktopSwitcher.showAppExpose()
+                    }
+                }
+            }
         }
       
     default:
@@ -195,6 +213,28 @@ class DesktopSwitcher {
         tell application "System Events" to key code 125 using {control down}
         """
         runAppleScript(script: script)
+    }
+    
+    // MARK: - Terminal Command Execution
+    
+    /// Execute terminal command using Process
+    static func executeTerminalCommand(_ command: String) {
+        let process = Process()
+        process.executableURL = URL(fileURLWithPath: "/bin/bash")
+        process.arguments = ["-c", command]
+        
+        do {
+            try process.run()
+            process.waitUntilExit()
+            print("Terminal command executed: \(command)")
+        } catch {
+            print("Error executing terminal command: \(error)")
+        }
+    }
+    
+    /// Open Cursor application
+    static func openCursor() {
+        executeTerminalCommand("open -a Cursor")
     }
 
 
