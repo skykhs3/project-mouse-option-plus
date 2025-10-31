@@ -94,30 +94,42 @@ func eventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, re
             
             if abs(deltaX) > abs(deltaY) {
                 if abs(deltaX) < minimumDragDistance {
-                    print("✅ Mouse button 4 simple click - Open Cursor")
-                    DesktopSwitcher.openCursor()
+                    let script = """
+                    tell application "System Events" to key code 36 using {control down, option down}
+                    """
+                    DesktopSwitcher.runAppleScript(script: script)
                 } else {
                     if deltaX > 0 {
-                        print("⬅️ Mouse button 4 Right drag detected - Desktop go left")
-                        DesktopSwitcher.switchToPrevious()
+                        let script = """
+                        tell application "System Events" to key code 124 using {control down, option down}
+                        """
+                        DesktopSwitcher.runAppleScript(script: script)
                     } else{
-                        print("➡️ Mouse button 4 Left drag detected - Desktop go right")
-                        DesktopSwitcher.switchToNext()
+                        let script = """
+                        tell application "System Events" to key code 123 using {control down, option down}
+                        """
+                        DesktopSwitcher.runAppleScript(script: script)
                     }
                     
                 }
             }
             else {
                 if abs(deltaY) < minimumDragDistance {
-                    print("✅ Mouse button 4 simple click - Open Cursor")
-                    DesktopSwitcher.openCursor()
+                    let script = """
+                    tell application "System Events" to key code 36 using {control down, option down}
+                    """
+                    DesktopSwitcher.runAppleScript(script: script)
                 } else {
                     if deltaY > 0 {
-                        print("⬅️ Mouse button 4 Up drag detected - Desktop go up")
-                        DesktopSwitcher.showMissionControl()
+                        let script = """
+                        tell application "System Events" to key code 126 using {control down, option down}
+                        """
+                        DesktopSwitcher.runAppleScript(script: script)
                     } else{
-                        print("➡️ Mouse button 4 Down drag detected - Desktop go down")
-                        DesktopSwitcher.showAppExpose()
+                        let script = """
+                        tell application "System Events" to key code 125 using {control down, option down}
+                        """
+                        DesktopSwitcher.runAppleScript(script: script)
                     }
                 }
             }
@@ -152,7 +164,7 @@ class DesktopSwitcher {
     }
     
     // ✅ Changed to class method by adding 'static'
-    private static func runAppleScript(script: String) {
+    static func runAppleScript(script: String) {
         // Create NSAppleScript object
         if let appleScript = NSAppleScript(source: script) {
             var error: NSDictionary?
